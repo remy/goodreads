@@ -1,0 +1,26 @@
+{
+  "name": "reads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remy/envy": "^4.0.1",
+    "@remy/goodreads-api-node": "^1.0.1",
+    "body-parser": "^1.18.3",
+    "date-fns": "^1.29.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "goodreads": "^0.1.0",
+    "goodreads-api-node": "0.0.9",
+    "level": "^4.0.0",
+    "level-session-store": "^2.1.0",
+    "passport": "^0.4.0",
+    "passport-goodreads": "^1.0.0"
+  }
+}
