@@ -28,12 +28,16 @@ router.get('/', requiresAuth, (req, res) => {
   res.json({ ...user, reviews: `${HOST}/reviews`, logout: `${HOST}/logout` });
 });
 
-router.get('/reviews', requiresAuth, (req, res) => {
+router.get('/reviews/:userId?', requiresAuth, (req, res, next) => {
   goodreads
-    .getReviews(req.user)
+    .getReviews({ ...req.user, id: req.params.userId || req.user.id })
     .then(reviews => res.json(reviews))
-    .catch(e => {
-      console.log(e);
-      res.status(500).json({ error: e.message });
-    });
+    .catch(next);
+});
+
+router.get('*', (req, res) => res.status(404).json({ error: 'not found' }));
+
+router.use((err, req, res, next) => {
+  console.log(e);
+  res.status(500).json({ error: e.message });
 });
