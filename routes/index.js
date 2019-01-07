@@ -37,7 +37,8 @@ router.get('/reviews/:userId?', requiresAuth, (req, res, next) => {
 
 router.get('*', (req, res) => res.status(404).json({ error: 'not found' }));
 
+//eslint-disable-next-line no-unused-vars
 router.use((err, req, res, next) => {
-  console.log(e);
-  res.status(500).json({ error: e.message });
+  console.log(err);
+  res.status(500).json({ error: err.message });
 });

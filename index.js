@@ -3,6 +3,7 @@ require('@remy/envy');
 const express = require('express');
 const session = require('express-session');
 const LevelStore = require('level-session-store')(session);
+const cors = require('cors');
 const tmpdir = require('os').tmpdir;
 
 // local
@@ -22,7 +23,7 @@ app.use(
     store: new LevelStore(`${tmpdir()}/goodreads.store`),
   })
 );
-
+app.use(cors({ origin: true, credentials: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(require('./routes'));

@@ -1,5 +1,5 @@
 {
-  "name": "reads",
+  "name": "@remy/goodreads",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
     "@remy/envy": "^4.0.1",
     "@remy/goodreads-api-node": "^1.0.1",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "date-fns": "^1.29.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
@@ -20,6 +21,7 @@
     "goodreads-api-node": "0.0.9",
     "level": "^4.0.0",
     "level-session-store": "^2.1.0",
+    "marked": "^0.5.2",
     "passport": "^0.4.0",
     "passport-goodreads": "^1.0.0"
   }
